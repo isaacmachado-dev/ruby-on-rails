@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  email: MyString
+
+two:
+  product: two
+  email: MyString
+
+joel:
+  product: tshirt
+  email: joel@thelastofus.com.br
+
+ellie:
+  product: tshirt
+  email: ellie@thelastofus.com.br

@@ -1,7 +1,7 @@
 <%# app/views/products/index.html.erb %>
 <h1>Products</h1>
 <h2><%= t ".title" %></h2>
-<h1><%= t "hello" %></h1>
+<h1><%= t "hello" %></h1>d3
 
 <%# Só aparece New Product if autenticado(logado) %>
 <%= link_to "New Product", new_product_path if authenticated? %>
@@ -13,3 +13,25 @@
     </div>
   <% end %>
 </div>
+
+<div data-controller="stimulus">
+  <input  data-stimulus-target="name" type="text" autocomplete="off">
+  <button data-action="click->stimulus#greet">Greet</button>
+</div>
+
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="1234" v-model="pin" readonly autocomplete="off" data-clipboard-supported-class="cllipboard--suported">
+  <button data-action="clipboard#copy">Copy to clipboard</button>
+</div>
+
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="4321" v-model="pin" readonly autocomplete="off" data-clipboard-supported-class="cllipboard--suported">
+  <button data-action="clipboard#copy">Copy to clipboard</button>
+</div>
+
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="5678" readonly autocomplete="off" data-clipboard-supported-class="cllipboard--suported">
+  <a href="#TestClipboardLink" data-action="clipboard#copy">Copy to Clipboard</a>
+</div>
+
+PIN: <textarea data-clipboard-target="source" readonly>9876</textarea>
