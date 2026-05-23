@@ -14,6 +14,8 @@
   <% end %>
 </div>
 
+<h1>Stimulus study </h1>
+
 <div data-controller="stimulus">
   <input  data-stimulus-target="name" type="text" autocomplete="off">
   <button data-action="click->stimulus#greet">Greet</button>
@@ -35,3 +37,31 @@
 </div>
 
 PIN: <textarea data-clipboard-target="source" readonly>9876</textarea>
+
+<div>
+  <div data-controller="slideshow" data-slideshow-index-value="1">
+    <button data-action="slideshow#previous"><-</button>
+    <button data-action="slideshow#next">-></button>
+
+    <div data-slideshow-target="slide">😨</div>
+    <div data-slideshow-target="slide">😱</div>
+    <div data-slideshow-target="slide">😰</div>
+    <div data-slideshow-target="slide">😓</div>
+    <div data-slideshow-target="slide">😥</div>
+    <div data-slideshow-target="slide">😭</div>
+
+  </div>
+</div>
+
+
+<!-- Assynchronous Loading HTML -->
+
+<div>
+  <div data-controller="content-loader">
+    <a href="#" data-content-loader-url-param="/messages.html"
+                data-action="click->content-loader#load">Messages</a>
+
+    <a href="#" data-content-loader-url-param="/comments.html"
+                data-action="click->content-loader#load">Comments</a>
+  </div>
+</div>
